@@ -25,24 +25,24 @@ form1.addEventListener('submit', (e) =>{
 
     let name = form1['fullName'].value;
     console.log(name)
-    const errors =[]
+const errors = {}
     if (fullName.value == ""  ){
-        // nameError.innerHTML = "Please fill in blank."
-        errors ['nameError'] = "Your name is required"
+        nameError.innerHTML = "Please fill in blank."
+        // errors ['nameError'] = "Your name is required"
     }
 
     if (title.value == ""){
-        // titleError.innerHTML = "Your title is required"
-         errors ['titleError'] = "Your title is required"
+        titleError.innerHTML = "Your title is required"
+        //  errors ['titleError'] = "Your title is required"
     }
 
-    let errs = " ";
-    for (let i in errors){
-        errs += errors[i] + "<br>";
-    }
+    // let errs = " ";
+    // for (let i in errors){
+    //     errs += errors[i] + "<br>";
+    // }
 
-    document.getElementById('errors').innerHTML = errs;
-    document.getElementById('errors').style.color = 'red'
+    // document.getElementById('errors').innerHTML = errs;
+    // document.getElementById('errors').style.color = 'red'
     // let phoneNumber = form1['phoneNumber'].value;
     
     if ( phoneNumber.value.startsWith('090')
@@ -62,12 +62,18 @@ form1.addEventListener('submit', (e) =>{
         emailError.innerHTML = "Enter a valid email"
     }
 
-    if (!errors.value || !emailDisplay.value || !phoneDisplay.value){
+
+    if (phoneNumberError.innerHTML == "" &&  emailError.innerHTML == "" && nameError.innerHTML == "" &&  titleError.innerHTML == ""){
         document.getElementById("titleDisplay").innerHTML = title.value;
         document.getElementById("nameDisplay").innerHTML = fullName.value;
         document.getElementById("phoneDisplay").innerHTML = phoneNumber.value;
         document.getElementById("emailDisplay").innerHTML = email.value;     
     }
+
+    // if (!errors && !emailDisplay && !phoneDisplay){
+       
+        
+    // }
 
     
 } );
