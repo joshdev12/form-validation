@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+
+    <div class="col-4 col-8  my-3 container">
+        <h2 >Form Validation</h2>
+    </div>
+
+    <div class="container">
+        <div class="title-section">
+            <p class="tiTle"> Title:-  <span id="titleDisplay"></span></p>
+           
+        </div>
+        <div class="name-section">
+            <p class="Name"> Name:- <span id="nameDisplay"></span></p>            
+        </div>
+        <div class="phone-section">
+            <p class="phone"> Contact:- <span id="phoneDisplay"></span></p>            
+        </div>
+        <div class="email-section">
+            <p class="eMail"> Email:- <span id="emailDisplay"></span></p>
+        </div>
+        <!-- <div>
+            <img src="" alt="" width="200" height="200" id="imgDisplay">
+        </div> -->
+    </div>
+    
+    <div>
+        <p id="errors" class="col-4 col-7  mx-auto"></p>
+    </div>
+    <form action="" id="form1" class="mx-auto">
+        
+        <div class="container ">
+            <div class="col-5 mx-auto">
+                <label for="">Full-Name</label>
+                <input type="text" name="name" id="fullName" class="form-control">
+                <small class="text-danger" id="nameError"></small>
+            </div>
+
+            <div class="col-5 mx-auto">
+                <label for="">Title</label>
+                <input type="text" name="title" id="title" class="form-control" >
+                <small class="text-danger" id="titleError"></small>
+            </div>
+
+            <div class="col-5 mx-auto">
+                <label for="">Phone-Number</label>
+                <input type="number" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="start with 090,080....">
+                <small class="text-danger" id="phoneNumberError"></small>
+            </div>
+
+            <div class="col-5 mx-auto">
+                <label for="">Email</label>
+                <input type="email" name="email" id="email" class="form-control"> 
+                <small class="text-danger" id="emailError"></small>
+            </div>
+            <div class="col-5 mx-auto">
+                <label for="">Upload File</label>
+                <input type="file" name="upload" id="upload" onchange="filedata()" class="form-control">
+                <br>
+                <div id="imageinfo"></div>
+                <small class="text-danger" id="fileError"></small>
+            </div>
+            <div class=" my-3 col-5 mx-auto ">
+                <button type="submit" class="btn btn-primary btn-sm " > submit form </button>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="verify.js"></script>
+</body>
+</html>
