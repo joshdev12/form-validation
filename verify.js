@@ -77,13 +77,14 @@ const errors = {}
 
     
 } );
+
  
 function filedata(){
     let file = form1['upload'].files[0];
     let size = (parseInt(file.size) / 1024).toFixed(2);
     let imagename = file.name;
     let lastmodfy = file.lastModifiedDate
-    document.getElementById('imgDisplay').src = "Pictures/" + imagename
+    document.getElementById('imgDisplay').innerHTML =   imagename
     document.querySelector('#imageinfo').innerHTML = `Name: ${imagename} <br>
     Size: ${size} MB <br> Modified Date: ${lastmodfy} <br>
     `
